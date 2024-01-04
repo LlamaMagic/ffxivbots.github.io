@@ -3,9 +3,24 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta http-equiv="refresh" content="url=https://llamamagic.net/"/>
+    {% assign time = 0 %}
+    {% assign targetname = page.target %}
+ 
+    {% if page.time %}
+    {% assign time = page.time %}
+    {% endif %}
+    
+    {% if page.targetname %}
+    {% assign targetname = page.targetname %}
+    {% endif %}
+
+    {% capture title %}Redirecting to LlamaMagic{% endcapture %}
+    {% if page.targettitle %}
+    {% assign title = page.targettitle %}
+    {% endif %}
+    <meta http-equiv="refresh" content="0,url=https://llamamagic.net/"/>
     <link rel="canonical" href="https://llamamagic.net/"/>
-    <title>LlamaMagic</title>
+    <title>LlamaMagic.net</title>
     <style>
         body {
             font-family: sans-serif;
@@ -15,10 +30,9 @@
     </style>
 </head>
 <body>
-    <h1>LlamaMagic</h1>
+    <h1>LlamaMagic.net</h1>
 
     <p>This document has moved!</p>
-
     <p>Redirecting to <a href="https://llamamagic.net/">LlamaMagic</a> in 0 seconds.</p>
 
 </body>
